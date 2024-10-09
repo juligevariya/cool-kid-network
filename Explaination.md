@@ -8,6 +8,17 @@ The primary goals are:
 - Provide role-based access to user data.
 - Facilitate role management by administrators.
 
+
+## Installation
+1. Clone the repository: `git clone https://github.com/your-username/cool-kids-network.git`
+2. Install WordPress on your local server.
+3. Move the theme folder to the `wp-content/themes` directory.
+4. Activate the theme in the WordPress admin dashboard.
+
+## Usage
+- Visit the homepage to sign up or log in.
+
+
 ## Technical Specifications
 
 The application is a single-page WordPress theme that fulfills the following requirements:

@@ -1,0 +1,319 @@
+/*
+Theme Name: Cool Kids Network
+Description: A custom theme for the Cool Kids Network game.
+Version: 1.0
+Author: Juli Gevariya
+*/
+* {
+    box-sizing: border-box
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+@font-face {
+    font-family: "Kanit", sans-serif;
+    src: url('assets/fonts/Kanit-Bold.eot');
+    src: url('assets/fonts/Kanit-Bold.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Kanit-Bold.woff') format('woff'), url('assets/fonts/Kanit-Bold.ttf') format('truetype'), url('assets/fonts/Kanit-Bold.svg#17ac8b31733bcfa5a20912d32b9c6cca') format('svg');
+    font-style: normal;
+    font-weight: 700
+}
+
+@font-face {
+    font-family: "Kanit", sans-serif;
+    src: url('assets/fonts/Kanit-Medium.eot');
+    src: url('assets/fonts/Kanit-Medium.eot?#iefix') format('embedded-opentype'), url('assets/fonts/Kanit-Medium.woff') format('woff'), url('assets/fonts/Kanit-Medium.ttf') format('truetype'), url('assets/fonts/Kanit-Medium.svg#a46f1fb42a2cf01d8be5116aa9c6d825') format('svg');
+    font-style: normal;
+    font-weight: 400
+}
+
+html {
+    font-size: 0.625em;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    height: 100%;
+    font-family: "Kanit", sans-serif;
+    font-size: 1.8rem;
+    line-height: 1.55;
+    font-weight: normal;
+    color: #333333
+}
+
+.container {
+    max-width: 100%;
+    width: 980px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1150px) {
+    .container {
+        margin: 0 auto
+    }
+}
+.btn, button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 35px;
+    border: 2px solid transparent;
+    vertical-align: middle;
+    background-image: none;
+    background: rgba(255, 255, 255, 0.2);
+    white-space: normal;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: 1.6rem;
+    line-height: 1.42;
+    border-radius: 25px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none
+}
+button:hover{
+    cursor: pointer;
+}
+
+.btn::-moz-focus-inner, button::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+.btn.btn-secondary {
+    color: #151921;
+    background: #fed23a;
+    margin-top: 10px;
+}
+#login-error {
+    color: red;
+    display: none;
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+.logged-in-message {
+    font-size: 1.8rem;
+    color: #28a745;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+label {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    appearance: none;
+    background: white url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="%23007bff"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>') no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+}
+
+select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+header.main-header {
+    position: relative;
+    padding: 180px 20px;
+    color: #FFFFFF;
+    background: #151921 url("assets/img/team-2017.jpg") fixed 50% 0 no-repeat;
+    background-size: cover
+}
+header.main-header:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: #151921;
+    opacity: .75;
+}
+
+header.main-header .container {
+    position: relative;
+    z-index: 2;
+}
+
+.brand-block {
+    max-width: 100%;
+    width: 980px;
+    margin: 0 auto;
+    text-align: left;
+    -webkit-animation-name: brand;
+    animation-name: brand;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out
+}
+
+.brand-subtitle {
+    font-size: 3.6rem;
+    line-height: 1.4
+}
+
+.brand-subtitle span {
+    color: #fed23a
+}
+
+.brand-link {
+    margin: 1em 0;
+    font-size: 1.8rem;
+    font-weight: bold
+}
+/* Login Form */
+.user-details .container{
+    max-width: 100%;
+    width: 980px;
+    margin: 0 auto;
+}
+.login-form-section{
+    margin: 50px 100px;
+}
+.signup-link{
+    margin: 50px 100px;
+}
+.character-container {
+    background-color: #f9f9f9;
+    padding: 0 20px;
+    max-width: 400px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Kanit", sans-serif;
+    line-height: 1.6;
+}
+/* About Section */
+.about-details {
+    margin: 0;
+    background-color: #fff9c4;
+    padding: 20px 0;
+}
+/* Table Section */
+.table-section {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 18px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-section th,
+.table-section td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-section thead th {
+    background-color: #fed23a;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 2px solid #fed23a;
+}
+
+.table-section tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.table-section tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Responsive Table for Mobile */
+@media (max-width: 768px) {
+    .table-section {
+        border: 0;
+    }
+
+    .table-section thead {
+        display: none;
+    }
+
+    .table-section tbody tr {
+        display: block;
+        margin-bottom: 15px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        padding: 10px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-section tbody td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+        position: relative;
+        padding-left: 50%;
+    }
+
+    .table-section tbody td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+    }
+
+    .table-section tbody td:last-child {
+        border-bottom: 0;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+/*============================*/
+
+/* Footer Section */
+.main-footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin:20px 0;
+}
+
+.main-footer p {
+    margin: 0;
+}
